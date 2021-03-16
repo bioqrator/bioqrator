@@ -1,0 +1,48 @@
+html, body {
+    height: 100%;
+    margin: 0px;
+}
+
+#index-header {
+    position: sticky;
+    top: 0;
+    background-color: #4e4e4e;
+    color: #fff;
+    font-size: 20px;
+}
+
+#index-body {
+    display: flex;
+    flex-direction: column;
+}
+
+#index-list {
+    display: flex;
+    flex-direction: column;
+}
+
+#index-list > .biosample-list {
+    flex: 1 0 auto;
+    list-style-type: none;
+    padding: 5px 10px 10px
+}
+
+#index-list > .biosample-list > li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+    min-height: 50px;
+}
+
+#index-list > .biosample-list > li:nth-child(2n) {
+    background-color: lightgrey;
+}
+
+#index-footer {
+    height: 10%;
+    position: sticky;
+    bottom: 0px;
+    padding: 10px;
+    background-color: #4e4e4e;
+}

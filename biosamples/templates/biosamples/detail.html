@@ -1,0 +1,20 @@
+<article>
+<h1>{{ object.sample_name }}</h1>
+<p>provided meta data?!...</p>
+
+{% if similars %}
+<div>
+<h2>Similar biosamples</h2>
+<ol>
+    {% for similar in similars %}
+    <li><a href="{% url 'biosamples:detail' similar.dst.id %}">{{ similar.dst.sample_name }}: 
+        {{ similar.score|stringformat:".2f" }}</a></li>
+    {% endfor %}
+</ol>
+</div>
+{% endif %}
+</article>
+
+<form action="{% url 'biosamples:index' %}">
+    <button type="submit">Go back to home</button>
+</form>

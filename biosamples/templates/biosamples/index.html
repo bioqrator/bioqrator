@@ -1,0 +1,29 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'biosamples/style.css' %}">
+
+<body id="index-body">
+    <header id="index-header">
+        <h1>Qrated Biosamples</h1>
+    </header>
+
+    <div id="index-list">
+    {% if whole_biosamples %}
+        <ul class="biosample-list">
+            {% for biosample in whole_biosamples %}
+            <li><a href="{% url 'biosamples:detail' biosample.id %}">{{ biosample.sample_name }}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Sorry, no biosamples found on our server</p>
+    {% endif %}
+    <form action="{% url 'biosamples:biosample-add' %}">
+        <label for="submit_button">Sumit your biosample with one click:
+        <button type="submit", id="submit_button">Submit</button>
+        </label>
+    </form>
+    </div>
+
+    <footer id="index-footer">
+    </footer>
+</body>
