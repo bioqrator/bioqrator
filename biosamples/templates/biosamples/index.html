@@ -7,6 +7,10 @@
         <h1>Qrated Biosamples</h1>
     </header>
 
+    <form class="search_biosample" method="GET" action="{% url 'biosamples:biosample-search' %}">
+        <input class="search_biosample" type="search" name="search">
+        <button class="search_biosample" type="submit">Search</button>
+    </form>
     <div id="index-list">
     {% if whole_biosamples %}
         <ul class="biosample-list">

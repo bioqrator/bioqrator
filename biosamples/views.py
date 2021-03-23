@@ -33,3 +33,18 @@ class BiosampleView(generic.edit.FormView):
         self.biosample = form.save()
         form.measure()
         return super().form_valid(form)
+
+class SearchView(generic.ListView):
+    model = Biosample
+    template_name = 'biosamples/index.html'
+    context_object_name = 'whole_biosamples'
+
+    def get_queryset(self):
+        result = super(SearchView, self).get_queryset()
+        query = self.request.GET.get('search')
+        if query:
+            postresult = Biosample.objects.all().filter(sample_name__contains=query)
+            result = postresult 
+        else:
+            result = None 
+        return result
