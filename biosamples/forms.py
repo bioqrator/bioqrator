@@ -4,7 +4,7 @@ import random
 
 class BiosampleForm(forms.Form):
     sample_name = forms.CharField()
-
+    
     def send_mail(self):
         pass 
     
