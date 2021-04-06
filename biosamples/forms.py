@@ -26,8 +26,10 @@ class BiosampleForm(forms.Form):
             Similarity.objects.create(src=other, dst=self.biosample, score=score)
 
     def save(self):
+        print(self.cleaned_data)
         self.biosample = Biosample.create_new(self.cleaned_data['sample_name'],
                                             self.cleaned_data['organism'],
+                                            self.cleaned_data['biosample'],
                                             self.cleaned_data['condition'],
                                             self.cleaned_data['treatment'],
                                             self.cleaned_data['treatment_time'],

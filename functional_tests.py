@@ -35,44 +35,96 @@ class FunctionalTest(StaticLiveServerTestCase):
 class NewVisitorTest(FunctionalTest):
 
     def test_can_go_to_submit_page(self):
-
-        self.browser.get('http://localhost:8000/biosamples')
-        
-        self.browser.find_element_by_id('submit_button').send_keys(Keys.ENTER)
-
-        input_box = self.wait_for(lambda: self.browser.find_element_by_id('id_sample_name'))
-        input_box.send_keys("Biosample 1")
-        input_box.send_keys(Keys.ENTER)
-
-        detail_sample_name = self.wait_for(lambda: self.browser.find_element_by_id('detail_sample_name'))
-        self.assertEqual(detail_sample_name.text, "Biosample 1")
-
-    def test_can_submit_biosample(self):
-        
-        self.browser.get('http://localhost:8000/biosamples/add')
-
-        input_box = self.browser.find_element_by_id('id_sample_name')
-
-        input_box.send_keys("Biosample 1")
-        
-        input_box.send_keys(Keys.ENTER)
-
-        sample_name_el = self.wait_for(lambda: self.browser.find_element_by_id('detail_sample_name'))
-        sample_name = sample_name_el.text 
-        
-        self.assertEqual(sample_name, "Biosample 1")
+        pass
 
 class BiosampleValidationTest(FunctionalTest):
 
-    def test_cannot_submit_empty_sample_name(self):
+    FIELDS = {'sample_name': "SM486AYH",
+            'organism': "Human", 
+            'biosample': "HeLa", 
+            'condition': "WT", 
+            'treatment': "hsa-miR", 
+            'treatment_time': "24hr",
+            'treatment_conc': "100nM", 
+            'target': "AARS", 
+            'assay': "mRNA-seq", 
+            'layout': "1x51", 
+            'platform': "HiSeq",}
+
+    REQUIRED_FIELDS = ['sample_name', 'organism', 'biosample']
+
+    def populate_field(self, field, value):
+        
+        input_box = self.wait_for(lambda: self.browser.find_element_by_id(f'id_{field}'))
+        
+        input_box.send_keys(value)
+
+    def clear_field(self, field):
+
+        input_box = self.wait_for(lambda: self.browser.find_element_by_id(f'id_{field}'))
+
+        input_box.clear()
+
+    def populate_all_fields(self):
+
+        for field, val in self.FIELDS.items():
+            self.populate_field(field, val)
+
+    def test_can_submit_biosample(self):
 
         self.browser.get('http://localhost:8000/biosamples/add')
 
-        input_box = self.wait_for(lambda: self.browser.find_element_by_id('id_sample_name'))
+        self.populate_all_fields()
+        save_button = self.browser.find_element_by_id('save_button')
+        save_button.send_keys(Keys.ENTER)
 
-        input_box.send_keys(Keys.ENTER)
+        for field, value in self.FIELDS.items():
+            li = self.wait_for(lambda: self.browser.find_element_by_id(f'li_{field}'))
+            self.assertEqual(li.text.split(':')[-1].strip(), value)
 
-        self.wait_for(lambda: self.browser.find_element_by_css_selector('#id_sample_name:invalid'))
+    def check_cannot_submit_with_empty_(self, field):
+
+        self.browser.get('http://localhost:8000/biosamples/add')
+
+        self.populate_all_fields()
+        self.clear_field(field)
+
+        save_button = self.browser.find_element_by_id('save_button')
+        save_button.send_keys(Keys.ENTER)
+
+        self.wait_for(lambda: self.browser.find_element_by_css_selector(f'#id_{field}:invalid'))
+
+    def test_cannot_submit_with_empty_sample_name(self):
+        
+        self.check_cannot_submit_with_empty_('sample_name')
+
+    def test_cannot_submit_if_required_fields_are_empty(self):
+        
+        for field in self.REQUIRED_FIELDS:
+            self.check_cannot_submit_with_empty_(field)
+
+    def check_can_submit_with_empty_(self, field):
+
+        self.browser.get('http://localhost:8000/biosamples/add')
+
+        self.populate_all_fields()
+        self.clear_field(field)
+
+        save_button = self.browser.find_element_by_id('save_button')
+        save_button.send_keys(Keys.ENTER)
+
+        for key, value in self.FIELDS.items():
+            li = self.wait_for(lambda: self.browser.find_element_by_id(f'li_{key}'))
+            if key != field: 
+                self.assertEqual(li.text.split(':')[-1].strip(), value)
+
+    def test_can_submit_with_nonrequired_fields_are_empty(self):
+        
+        for field in self.FIELDS:
+            if field not in self.REQUIRED_FIELDS:
+                self.check_can_submit_with_empty_(field)
+                
+                time.sleep(3)
 
 
 if __name__=="__main__":

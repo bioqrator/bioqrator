@@ -1,6 +1,10 @@
 <article>
 <h1 id="detail_sample_name">{{ object.sample_name }}</h1>
-<p>provided meta data?!...</p>
+<ul>
+    {% for label, data in object.get_fields %}
+    <li id='li_{{ label }}'>{{ label }}: {{ data }}</li>
+    {% endfor %}
+</ul>
 
 {% if similars %}
 <div>

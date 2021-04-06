@@ -40,6 +40,9 @@ class Biosample(models.Model):
                                             platform=platform)
         return biosample 
 
+    def get_fields(self):
+        return [(field.name, field.value_to_string(self)) for field in Biosample._meta.fields]
+
 class Similarity(models.Model):
     src = models.ForeignKey(Biosample, on_delete=models.CASCADE, related_name='src')
     dst = models.ForeignKey(Biosample, on_delete=models.CASCADE, related_name='dst')
