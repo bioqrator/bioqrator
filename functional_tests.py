@@ -29,13 +29,17 @@ class FunctionalTest(StaticLiveServerTestCase):
     def setUp(self):
         self.browser = webdriver.Firefox()
 
+        self.live_server_index = self.live_server_url + '/biosamples'
+        self.live_server_add = self.live_server_index + '/add'
+
     def tearDown(self):
         self.browser.quit()
 
 class NewVisitorTest(FunctionalTest):
 
     def test_can_go_to_submit_page(self):
-        pass
+        
+        self.browser.get(self.live_server_index)
 
 class BiosampleValidationTest(FunctionalTest):
 
@@ -72,7 +76,7 @@ class BiosampleValidationTest(FunctionalTest):
 
     def test_can_submit_biosample(self):
 
-        self.browser.get('http://localhost:8000/biosamples/add')
+        self.browser.get(self.live_server_add)
 
         self.populate_all_fields()
         save_button = self.browser.find_element_by_id('save_button')
@@ -84,7 +88,7 @@ class BiosampleValidationTest(FunctionalTest):
 
     def check_cannot_submit_with_empty_(self, field):
 
-        self.browser.get('http://localhost:8000/biosamples/add')
+        self.browser.get(self.live_server_add)
 
         self.populate_all_fields()
         self.clear_field(field)
@@ -105,26 +109,69 @@ class BiosampleValidationTest(FunctionalTest):
 
     def check_can_submit_with_empty_(self, field):
 
-        self.browser.get('http://localhost:8000/biosamples/add')
+        self.browser.get(self.live_server_add)
 
         self.populate_all_fields()
         self.clear_field(field)
+
+        self.clear_field('sample_name')
+        self.populate_field('sample_name', f'E{field[:7]}')
 
         save_button = self.browser.find_element_by_id('save_button')
         save_button.send_keys(Keys.ENTER)
 
         for key, value in self.FIELDS.items():
             li = self.wait_for(lambda: self.browser.find_element_by_id(f'li_{key}'))
-            if key != field: 
-                self.assertEqual(li.text.split(':')[-1].strip(), value)
+            if key != field:
+                if key == "sample_name":
+                    self.assertEqual(li.text.split(':')[-1].strip(), f'E{field[:7]}')
+                else:
+                    self.assertEqual(li.text.split(':')[-1].strip(), value)
 
     def test_can_submit_with_nonrequired_fields_are_empty(self):
         
         for field in self.FIELDS:
             if field not in self.REQUIRED_FIELDS:
                 self.check_can_submit_with_empty_(field)
-                
-                time.sleep(3)
+
+class SearchTest(FunctionalTest):
+
+    FIELDS = {'sample_name': "SM486AYH",
+            'organism': "Human", 
+            'biosample': "HeLa", 
+            'condition': "WT", 
+            'treatment': "hsa-miR", 
+            'treatment_time': "24hr",
+            'treatment_conc': "100nM", 
+            'target': "AARS", 
+            'assay': "mRNA-seq", 
+            'layout': "1x51", 
+            'platform': "HiSeq",}
+
+    def add_sample(self):
+        self.browser.get(self.live_server_add)
+
+        for field, val in self.FIELDS.items():
+            input_box = self.wait_for(lambda: self.browser.find_element_by_id(f'id_{field}'))
+            input_box.send_keys(val)
+        save_button = self.browser.find_element_by_id('save_button')
+        save_button.send_keys(Keys.ENTER)
+
+    def test_can_search_with_sample_name(self):
+        
+        self.add_sample()
+
+        self.browser.get(self.live_server_index)
+        
+        search_box = self.browser.find_element_by_id('search_box')
+        
+        search_box.send_keys("SM486AYH")
+        search_box.send_keys(Keys.ENTER)
+
+        container = self.browser.find_element_by_class_name('biosample-list')
+        lists = container.find_elements_by_tag_name("li")
+        for li in lists:
+            self.assertIn("SM486AYH", li.text)
 
 
 if __name__=="__main__":
