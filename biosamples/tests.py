@@ -3,6 +3,7 @@ from django.test import TestCase
 
 from .models import Biosample
 
+
 class BiosampleIndexViewTest(TestCase):
 
     def test_index_uses_right_template(self):
