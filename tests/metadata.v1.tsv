@@ -1,0 +1,124 @@
+id	organism	biosample	condition	treatment	treatment_time	treatment_conc	target	assay	layout	platform	date
+SM983QNP	hsa	HeLa		mock	48hr	10nM		mRNA-seq	2x101	HiSeq	2012-02-06
+SM225JDW	hsa	HeLa		hsa-miR-1-5p	48hr	10nM		mRNA-seq	2x101	HiSeq	2012-02-06
+SM283JGH	hsa	HeLa		hsa-miR-7-5p	48hr	10nM		mRNA-seq	2x101	HiSeq	2012-02-06
+SM396GJZ	hsa	HeLa		hsa-miR-9-5p	48hr	10nM		mRNA-seq	2x101	HiSeq	2012-02-06
+SM202OWQ	hsa	HeLa		hsa-miR-122-5p	48hr	10nM		mRNA-seq	2x101	HiSeq	2012-02-06
+SM427TVQ	hsa	HeLa		hsa-miR-124-3p	48hr	10nM		mRNA-seq	2x101	HiSeq	2012-02-06
+SM341ZTF	hsa	HeLa		hsa-miR-128-3p	48hr	10nM		mRNA-seq	2x101	HiSeq	2012-02-06
+SM995OTA	hsa	HeLa		hsa-miR-132-3p	48hr	10nM		mRNA-seq	2x101	HiSeq	2012-02-06
+SM042GBJ	hsa	HeLa		hsa-miR-133a-3p	48hr	10nM		mRNA-seq	2x101	HiSeq	2012-02-06
+SM497QMS	hsa	HeLa		hsa-miR-142-3p	48hr	10nM		mRNA-seq	2x101	HiSeq	2012-02-06
+SM960HAM	hsa	HeLa		hsa-miR-148b-3p	48hr	10nM		mRNA-seq	2x101	HiSeq	2012-02-06
+SM321NMZ	hsa	HeLa		hsa-miR-181a-5p	48hr	10nM		mRNA-seq	2x101	HiSeq	2012-02-06
+SM195HMJ	mmu	EL4						sRNA-seq	1x51	HiSeq	2012-02-06
+SM517VQD	mmu	RAW264.7						sRNA-seq	1x51	HiSeq	2012-02-06
+SM286LPX	mmu	NS-1						sRNA-seq	1x51	HiSeq	2012-02-06
+SM402GKZ	mmu	NOR-10						sRNA-seq	1x51	HiSeq	2012-02-06
+SM830YGR	mmu	NCTC						sRNA-seq	1x51	HiSeq	2012-02-06
+SM292EII	mml	Whole brain						sRNA-seq	1x51	HiSeq	2012-08-01
+SM390PVM	mml	Colon						sRNA-seq	1x51	HiSeq	2012-08-01
+SM768IRO	mml	Heart						sRNA-seq	1x51	HiSeq	2012-08-01
+SM836BPL	mml	Kidney						sRNA-seq	1x51	HiSeq	2012-08-01
+SM093SOF	mml	Liver						sRNA-seq	1x51	HiSeq	2012-08-01
+SM996UFF	rno	Whole brain						sRNA-seq	1x51	HiSeq	2012-08-01
+SM836QLS	rno	Colon						sRNA-seq	1x51	HiSeq	2012-08-01
+SM840VCC	rno	Heart						sRNA-seq	1x51	HiSeq	2012-08-01
+SM962DOF	rno	Kidney						sRNA-seq	1x51	HiSeq	2012-08-01
+SM946QVL	rno	Liver						sRNA-seq	1x51	HiSeq	2012-08-01
+SM736KRT	hsa	HCT116	WT					sRNA-seq	1x65	MiSeq	2014-01-07
+SM915AAA	hsa	HCT116	DICER KO					sRNA-seq	1x65	MiSeq	2014-01-07
+SM139VNS	hsa	HCT116	WT					sRNA-seq	1x65	MiSeq	2014-01-07
+SM568FRX	hsa	HCT116	DICER KO					sRNA-seq	1x65	MiSeq	2014-01-07
+SM068ZEQ	hsa	HCT116	DICER KO	mock	24hr			mRNA-seq	1x65	MiSeq	2014-03-08
+SM873QUA	hsa	HCT116	DICER KO	hsa-miR-155-5p	24hr	100nM		mRNA-seq	1x65	MiSeq	2014-03-08
+SM528YZG	hsa	HCT116	DICER KO	mock	24hr			mRNA-seq	1x65	MiSeq	2014-03-08
+SM835HVH	hsa	HCT116	DICER KO	hsa-miR-155-5p	24hr	100nM		mRNA-seq	1x65	MiSeq	2014-03-08
+SM870MKF	hsa	HeLa		mock	24hr	25nM		RPF-seq	1x65	MiSeq	2014-04-01
+SM873HKP	hsa	HeLa		hsa-miR-155-5p	24hr	25nM		RPF-seq	1x65	MiSeq	2014-04-01
+SM696FTC	hsa	HeLa		mock	24hr	25nM		RPF-seq	1x65	MiSeq	2014-04-01
+SM614IHM	hsa	HeLa		hsa-miR-155-5p	24hr	25nM		RPF-seq	1x65	MiSeq	2014-04-01
+SM848IWP	hsa	HEK293T	WT	hsa-miR-129-2-3p	24hr	75nM		mRNA-seq	1x51	HiSeq	2019-11-20
+SM694EAR	hsa	HEK293T	WT	hsa-miR-338-3p	24hr	75nM		mRNA-seq	1x51	HiSeq	2019-11-20
+SM518VFF	hsa	HEK293T	WT	hsa-miR-184	24hr	75nM		mRNA-seq	1x51	HiSeq	2019-11-20
+SM114JXF	hsa	HEK293T	PCBP2 KO	hsa-miR-129-2-3p	24hr	75nM		mRNA-seq	1x51	HiSeq	2019-11-20
+SM444RLF	hsa	HEK293T	PCBP2 KO	hsa-miR-338-3p	24hr	75nM		mRNA-seq	1x51	HiSeq	2019-11-20
+SM430CYQ	hsa	HEK293T	PCBP2 KO	hsa-miR-184	24hr	75nM		mRNA-seq	1x51	HiSeq	2019-11-20
+SM987VLI	hsa	HepG2	WT	mock	48hr			mRNA-seq	1x51	HiSeq	2019-11-20
+SM731NTR	hsa	HepG2	WT	hsa-miR-187-3p	48hr	200nM		mRNA-seq	1x51	HiSeq	2019-11-20
+SM494VOZ	hsa	HepG2	WT	hsa-miR-147b	48hr	200nM		mRNA-seq	1x51	HiSeq	2019-11-20
+SM805TZV	hsa	HepG2	WT	hsa-mIR-31-5p	48hr	200nM		mRNA-seq	1x51	HiSeq	2019-11-20
+SM122FRG	hsa	HepG2	WT	hsa-miR-184	48hr	200nM		mRNA-seq	1x51	HiSeq	2019-11-20
+SM168LVR	hsa	HEK293T	IGF2BP1 KO	hsa-miR-129-2-3p	24hr	75nM		mRNA-seq	1x51	HiSeq	2019-11-20
+SM574VRT	hsa	HEK293T	IGF2BP1 KO	hsa-miR-338-3p	24hr	75nM		mRNA-seq	1x51	HiSeq	2019-11-20
+SM100JYZ	hsa	HEK293T	IGF2BP1 KO	hsa-miR-184	24hr	75nM		mRNA-seq	1x51	HiSeq	2019-11-20
+SM597DIG	hsa	HepG2	WT	mock	48hr			mRNA-seq	1x51	HiSeq	2019-11-20
+SM842CQL	hsa	HepG2	WT	hsa-miR-187-3p	48hr	200nM		mRNA-seq	1x51	HiSeq	2019-11-20
+SM124DXK	hsa	HepG2	WT	hsa-miR-147b	48hr	200nM		mRNA-seq	1x51	HiSeq	2019-11-20
+SM081ZIU	hsa	HepG2	WT	hsa-mIR-31-5p	48hr	200nM		mRNA-seq	1x51	HiSeq	2019-11-20
+SM754RMK	hsa	HepG2	WT	hsa-miR-184	48hr	200nM		mRNA-seq	1x51	HiSeq	2019-11-20
+SM173MZN	hsa	HEK293T	IGF2BP1 KO	mock	24hr			mRNA-seq	1x51	HiSeq	2019-11-20
+SM004XTK	hsa	HEK293T	WT	mock	24hr			mRNA-seq	1x51	HiSeq	2019-11-20
+SM980MGL	hsa	HEK293T	PCBP2 KO	mock	24hr			mRNA-seq	1x51	HiSeq	2019-11-20
+SM506CMZ	hsa	Calu-3			48hr			RPF-seq	1x51	HiSeq	2020-05-19
+SM783CXB	hsa	Calu-3		SARS-CoV-2	48hr	MOI 0.1		RPF-seq	1x51	HiSeq	2020-05-19
+SM551JHT	hsa	Calu-3			48hr			RPF-seq	1x51	HiSeq	2020-05-19
+SM776ZGD	hsa	Calu-3		SARS-CoV-2	48hr	MOI 0.1		RPF-seq	1x51	HiSeq	2020-05-19
+SM625RWY	hsa	Calu-3			48hr			RPF-seq	1x51	HiSeq	2020-05-19
+SM695VUN	hsa	Calu-3		SARS-CoV-2	48hr	MOI 0.1		RPF-seq	1x51	HiSeq	2020-05-19
+SM870KTM	hsa	Calu-3			48hr			QTI-seq	1x51	HiSeq	2020-05-19
+SM009HIG	hsa	Calu-3		SARS-CoV-2	48hr	MOI 0.1		QTI-seq	1x51	HiSeq	2020-05-19
+SM832JNR	hsa	Calu-3			48hr			QTI-seq	1x51	HiSeq	2020-05-19
+SM470ZUN	hsa	Calu-3		SARS-CoV-2	48hr	MOI 0.1		QTI-seq	1x51	HiSeq	2020-05-19
+SM465NZG	hsa	Calu-3			48hr			QTI-seq	1x51	HiSeq	2020-05-19
+SM850DOW	hsa	Calu-3		SARS-CoV-2	48hr	MOI 0.1		QTI-seq	1x51	HiSeq	2020-05-19
+SM925NGI	hsa	Calu-3			48hr			sRNA-seq	1x51	HiSeq	2020-05-19
+SM141EYT	hsa	Calu-3		SARS-CoV-2	48hr	MOI 0.1		sRNA-seq	1x51	HiSeq	2020-05-19
+SM371VMJ	hsa	Calu-3			48hr			mRNA-seq	1x101	HiSeq	2020-05-19
+SM806VGN	hsa	Calu-3			48hr			mRNA-seq	1x101	HiSeq	2020-05-19
+SM328SFC	hsa	Calu-3			48hr			mRNA-seq	1x101	HiSeq	2020-05-19
+SM513UKB	hsa	Calu-3		SARS-CoV-2	48hr	MOI 0.1		mRNA-seq	1x101	HiSeq	2020-05-19
+SM765MCC	hsa	Calu-3		SARS-CoV-2	48hr	MOI 0.1		mRNA-seq	1x101	HiSeq	2020-05-19
+SM361IRC	hsa	Calu-3		SARS-CoV-2	48hr	MOI 0.1		mRNA-seq	1x101	HiSeq	2020-05-19
+SM370FQK	hsa	Calu-3			48hr			mRNA-seq	1x101	HiSeq	2020-05-19
+SM577EDQ	hsa	Calu-3			48hr			mRNA-seq	1x101	HiSeq	2020-05-19
+SM203IYC	hsa	Calu-3			48hr			mRNA-seq	1x101	HiSeq	2020-05-19
+SM625OET	hsa	Calu-3		SARS-CoV-2	48hr	MOI 0.1		mRNA-seq	1x101	HiSeq	2020-05-19
+SM837TQN	hsa	Calu-3		SARS-CoV-2	48hr	MOI 0.1		mRNA-seq	1x101	HiSeq	2020-05-19
+SM610GHZ	hsa	Calu-3		SARS-CoV-2	48hr	MOI 0.1		mRNA-seq	1x101	HiSeq	2020-05-19
+SM070JWT	hsa	Calu-3		SARS-CoV-2	48hr	MOI 0.1		RPF-seq	1x51	HiSeq	2020-07-24
+SM900WLS	hsa	Calu-3		SARS-CoV-2	48hr	MOI 0.1		RPF-seq	1x51	HiSeq	2020-07-24
+SM803QOS	hsa	Calu-3		SARS-CoV-2	48hr	MOI 0.1		RPF-seq	1x51	HiSeq	2020-07-24
+SM380IUT	hsa	Calu-3		SARS-CoV-2	48hr	MOI 0.1		RPF-seq	1x51	HiSeq	2020-07-24
+SM225DTS	hsa	Calu-3		SARS-CoV-2	48hr	MOI 0.1		RPF-seq	1x51	HiSeq	2020-07-24
+SM052KZS	cae	Vero		SARS-CoV-2	0hr	MOI 0.1		RPF-seq	1x51	HiSeq	2020-07-24
+SM565ARR	cae	Vero		SARS-CoV-2	24hr	MOI 0.1		RPF-seq	1x51	HiSeq	2020-07-24
+SM083YOP	hsa	Calu-3		SARS-CoV-2	48hr	MOI 0.1		RPF-seq	1x51	HiSeq	2020-07-24
+SM824UWJ	hsa	Calu-3		SARS-CoV-2	48hr	MOI 0.1		RPF-seq	1x51	HiSeq	2020-07-24
+SM894EGE	hsa	Calu-3		SARS-CoV-2	48hr	MOI 0.1		RPF-seq	1x51	HiSeq	2020-07-24
+SM414XQG	hsa	Calu-3		SARS-CoV-2	48hr	MOI 0.1		RPF-seq	1x51	HiSeq	2020-07-24
+SM619RHS	hsa	Calu-3		SARS-CoV-2	48hr	MOI 0.1		RPF-seq	1x51	HiSeq	2020-07-24
+SM791DTQ	cae	Vero		SARS-CoV-2	0hr	MOI 0.1		RPF-seq	1x51	HiSeq	2020-07-24
+SM174DZB	cae	Vero		SARS-CoV-2	24hr	MOI 0.1		RPF-seq	1x51	HiSeq	2020-07-24
+SM409VAC	hsa	HEK293T	WT	DMS-				DMS-seq	1x51	HiSeq	2020-12-28
+SM541FFI	hsa	HEK293T	WT	DMS-				DMS-seq	1x51	HiSeq	2020-12-28
+SM242RGI	hsa	HEK293T	WT	DMS+				DMS-seq	1x51	HiSeq	2020-12-28
+SM971UMM	hsa	HEK293T	WT	DMS+				DMS-seq	1x51	HiSeq	2020-12-28
+SM514CYO	hsa	HEK293T	IGF2BP1 KO	DMS+				DMS-seq	1x51	HiSeq	2020-12-28
+SM459QIL	hsa	HEK293T	IGF2BP1 KO	DMS-				DMS-seq	1x51	HiSeq	2020-12-28
+SM868VGJ	hsa	Calu-3		SARS-CoV-2	48hr	MOI 0.1		RPF-seq	1x51	HiSeq	2020-01-29
+SM074XZH	hsa	Calu-3		SARS-CoV-2	48hr	MOI 0.1		RPF-seq	1x51	HiSeq	2020-01-29
+SM706NTY	hsa	Calu-3		SARS-CoV-2	72hr	MOI 0.1		RPF-seq	1x51	HiSeq	2020-01-29
+SM101SXA	hsa	Calu-3		SARS-CoV-2	72hr	MOI 0.1		RPF-seq	1x51	HiSeq	2020-01-29
+SM070YYI	hsa	Calu-3		SARS-CoV-2	48hr	MOI 0.1		QTI-seq	1x51	HiSeq	2020-01-29
+SM757PDA	hsa	Calu-3		SARS-CoV-2	48hr	MOI 0.1		QTI-seq	1x51	HiSeq	2020-01-29
+SM285PND	hsa	Calu-3		SARS-CoV-2	72hr	MOI 0.1		QTI-seq	1x51	HiSeq	2020-01-29
+SM073XZM	hsa	Calu-3		SARS-CoV-2	72hr	MOI 0.1		QTI-seq	1x51	HiSeq	2020-01-29
+SM145JSR	hsa	Caco-2						RPF-seq	1x51	HiSeq	2020-01-29
+SM291IDP	hsa	Caco-2						RPF-seq	1x51	HiSeq	2020-01-29
+SM740NRU	hsa	Caco-2		SARS-CoV-2	48hr	MOI 0.1		RPF-seq	1x51	HiSeq	2020-01-29
+SM991HHA	hsa	Caco-2		SARS-CoV-2	48hr	MOI 0.1		RPF-seq	1x51	HiSeq	2020-01-29
+SM683UZW	hsa	Caco-2						QTI-seq	1x51	HiSeq	2020-01-29
+SM435DRT	hsa	Caco-2						QTI-seq	1x51	HiSeq	2020-01-29
+SM729RYD	hsa	Caco-2		SARS-CoV-2	48hr	MOI 0.1		QTI-seq	1x51	HiSeq	2020-01-29
+SM962EIN	hsa	Caco-2		SARS-CoV-2	48hr	MOI 0.1		QTI-seq	1x51	HiSeq	2020-01-29
